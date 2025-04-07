@@ -21,7 +21,13 @@ Make sure you have Ruby installed (recommended: >= 2.6). Then run:
 bundle install
 ```
 
-### 3. Run the CLI
+### 3. Configure .env
+
+- Create a file named .env in the root folder.
+- Add the following line to define the API endpoint:
+  DATA_API_ENDPOINT=https://appassets02.shiftcare.com/manual/clients.json
+
+### 4. Run the CLI
 
 You can execute the CLI directly from the command line:
 
@@ -29,7 +35,7 @@ You can execute the CLI directly from the command line:
 ruby bin/data_scout.rb
 ```
 
-### 4. Usage Examples
+### 5. Usage Examples
 
 ```bash
 search John
@@ -46,7 +52,7 @@ jane.smith@yahoo.com appears 2 times
 exit
 ```
 
-### 5. Run spec
+### 6. Run spec
 
 ```bash
 rspec spec

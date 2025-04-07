@@ -1,11 +1,12 @@
 require 'json'
 require 'net/http'
 require 'uri'
+require 'dotenv/load'
 
 module DataScout
   class DataLoader
     def initialize(api_endpoint = nil)
-      @api_endpoint = api_endpoint || 'https://appassets02.shiftcare.com/manual/clients.json'
+      @api_endpoint = api_endpoint || ENV['DATA_API_ENDPOINT']
       @clients = nil
     end
 

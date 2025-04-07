@@ -1,8 +1,9 @@
 require_relative '../lib/data_loader'
 require 'webmock/rspec'
+require 'dotenv/load'
 
 RSpec.describe DataScout::DataLoader do
-  let(:api_url) { 'https://appassets02.shiftcare.com/manual/clients.json' }
+  let(:api_url) { ENV['DATA_API_ENDPOINT'] }
   let(:client_data) do
     [
       { "id" => 1, "full_name" => "John Doe", "email" => "john@example.com" },
